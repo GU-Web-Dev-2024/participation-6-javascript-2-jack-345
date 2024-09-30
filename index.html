@@ -55,9 +55,14 @@
 
     <script>
         // JavaScript code goes here
+        let min = 1;
+        let max = 10;
 
         let guessNum = Math.floor(Math.random * 10) + 1;
         console.log(guessNum);
+
+        let guessCount = 0;
+        let maxGuesses = 3;
         //generating number to be guessed
 
         // Added a click listener to the button (will be covered more in zyBook 7.4), 
@@ -66,22 +71,23 @@
         // adds an event listener (for a click) of that selected element.
         // executes the code in the body of the anonymous function
         let button = document.getElementById('guess-button');
-        button.addEventListener('click', function () {
+            button.addEventListener('click', function () {
             //function body -- any code here will be executed when the registered event is triggered.
             //alert("clicked");
-            let guessInput = document.getElementById("guess-input").value;
-            alert(guessInput.value);
+                let guessInput = document.getElementById("guess-input").value;
+                alert(guessInput.value);
 
-            if (guessInput > guessNum) {
+                if (guessInput > guessNum) {
                 alert("Too high, guess again.")
-            }
-            if (guessInput < guessNum) {
+                }
+                if (guessInput < guessNum) {
                 alert("Too low, guess again")
-            }
-            if (guessInput == guessNum) {
+                }
+                if (guessInput == guessNum) {
                 alert("Correct, you win.")
-            }
-        });
+                }
+            });
+            
 
     </script>
 </body>
