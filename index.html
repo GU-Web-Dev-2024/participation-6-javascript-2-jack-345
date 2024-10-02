@@ -58,7 +58,7 @@
         let min = 1;
         let max = 10;
 
-        let guessNum = Math.floor(Math.random * 10) + 1;
+        let guessNum = Math.floor(Math.random() * 10) + 1;
         console.log(guessNum);
 
         let guessCount = 0;
@@ -77,14 +77,18 @@
                 let guessInput = document.getElementById("guess-input").value;
                 alert(guessInput.value);
 
-                if (guessInput > guessNum) {
-                alert("Too high, guess again.")
-                }
-                if (guessInput < guessNum) {
-                alert("Too low, guess again")
-                }
-                if (guessInput == guessNum) {
-                alert("Correct, you win.")
+                while (guessCount <= 3) {
+                    if (guessInput > guessNum) {
+                    alert("Too high, guess again.")
+                    guessCount += 1;
+                    }
+                    if (guessInput < guessNum) {
+                    alert("Too low, guess again")
+                    guessCount += 1;
+                    }
+                    if (guessInput == guessNum) {
+                        alert("Correct, you win.")
+                    }
                 }
             });
             
