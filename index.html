@@ -86,15 +86,17 @@
                 if (guessInput < guessNum) {
                     alert("Too low, guess again");
                     guessCount += 1;
+                    alert("Guesses left:" + (maxGuesses - guessCount));
                     }
                 if (guessInput == guessNum) {
                     alert("Correct, you win.");
-                    
+                    alert("Number to be guessed: " + guessNum);
                     }
 
                 //end message
                 if (guessCount == maxGuesses) {
                     alert("Out of guesses!");
+                    alert("Number to be guessed: " + guessNum);
                 }
 
             });
