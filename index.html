@@ -77,19 +77,26 @@
                 let guessInput = document.getElementById("guess-input").value;
                 alert(guessInput.value);
 
-                while (guessCount <= 3) {
-                    if (guessInput > guessNum) {
+                //guessing conditions
+                if (guessInput > guessNum) {
                     alert("Too high, guess again.")
                     guessCount += 1;
+                    alert("Guesses left:" + (maxGuesses - guessCount));
                     }
-                    if (guessInput < guessNum) {
-                    alert("Too low, guess again")
+                if (guessInput < guessNum) {
+                    alert("Too low, guess again");
                     guessCount += 1;
                     }
-                    if (guessInput == guessNum) {
-                        alert("Correct, you win.")
+                if (guessInput == guessNum) {
+                    alert("Correct, you win.");
+                    
                     }
+
+                //end message
+                if (guessCount == maxGuesses) {
+                    alert("Out of guesses!");
                 }
+
             });
             
 
